@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahdavi Muhammad Azzuhaily</title>
+    <style>
+        body{
+            background-color: #1b1e23;
+        }
+        #content{
+            color: #f0f0f0;
+            display: grid;
+            justify-content: center;
+            row-gap: 20px;
+        }
+        #welcome{
+            display: flex;
+            padding: 20%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 300px;
+        }
+        #text{
+            width: 100%;
+            letter-spacing: 10px;
+            overflow: hidden;
+            font-size: 50px;
+            border-right: 1px solid white;
+            animation: ketik .5s steps(3), cursor .4s step-end infinite alternate;
+        }
+        @keyframes cursor {
+            50%{border-right: transparent;}
+        }
+
+        @keyframes ketik {
+            from{
+                width: 0;
+            }
+            to{
+                width: 100%;
+            }
+        }
+
+        #foto{
+            margin: 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        #covfoto{
+            display: flex;
+            width: 40vw;
+            height: 40vw;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        #coverfoto{
+            display: flex;
+            margin: 0;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid white;
+            border-radius: 200px;
+        }
+        img{
+            position: relative;
+            border: 2px solid white;
+            object-fit: cover;
+            width: 40vw;
+            border-radius: 200px;
+        }
+        #nama{
+            font-size: 20px;
+            color: #f0f0f0;
+        }
+
+        #desc{
+            text-align: justify;
+            border: 1px solid #f0f0f0;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        #language{
+            display: grid;
+            padding: 10px;
+        }
+        #label{
+            top: 2px;
+            color: white;
+            position: relative;
+        }
+        #label div{
+            width: 28%;
+            padding: 2px 10px;
+            background-color: #1b1e23;
+            border: 2px solid #f0f0f0;
+            border-bottom: none;
+            border-radius: 10px 10px 0px 0px;
+        }
+        #content1{
+            padding: 6px 13px
+            ;
+            border: 2px solid #f0f0f0;
+            border-radius: 0px 10px 10px 10px;
+            display: grid;
+            column-gap: 20px;
+            row-gap: 10px;
+            grid-template-columns: auto auto;
+        }
+        .jenis{
+            display: flex;
+            padding: 5px 5px 5px 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        #lang{
+            padding-right: 10px;
+            border: none;
+            width: 30px;
+        }
+
+        #skill{
+            display: grid;
+            padding: 10px;
+        }
+        
+        #study{
+            padding: 10px;
+            display: grid;
+        }
+        .jenis2{
+            padding: 5px 5px 5px 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .grade{
+            color: #f0f0f08e;
+            font-size: 13px;
+        }
+
+        @media (max-width: 550px) {
+            #label div{
+                width: 50%;
+            }
+        }
+        @media (max-width: 460px) {
+            #content1{
+                grid-template-columns: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div id="welcome">
+            <div id="covtext"><p id="text">Hi!</p></div>
+        </div>
+        <div id="foto">
+            <div id="covfoto">
+                <div id="coverfoto">
+                    <img src="foto diri.jpg" alt="">
+                </div>
+            </div>
+            <p id="nama">Ahdavi Muhammad Azzuhaily</p>
+        </div>
+
+        <div id="desc">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Mahasiswa aktif Institut Teknologi Sumatera program studi Matematika. Menguasai beberapa bahasa pemrograman dan software beberapa software microsoft serta dapat beradaptasi terhadap lingkungan, bekerja sama tim, dan bekerja keras.</p>
+        </div>
+        <div id="language">
+            <div id="label"><div>Bahasa Pemrograman</div></div>
+            <div id="content1">
+                <div class="jenis">
+                    <div><img src="https://images.icon-icons.com/2699/PNG/512/python_logo_icon_168886.png" id="lang"></div>
+                    <div>
+                        <div>Python</div>
+                    </div>
+                </div>
+                <div class="jenis">
+                    <div><img src="https://images.icon-icons.com/2107/PNG/512/file_type_html_icon_130541.png" id="lang"></div>
+                    <div>
+                        <div>HTML</div>
+                    </div>
+                </div>
+                <div class="jenis">
+                    <div><img src="https://images.icon-icons.com/2107/PNG/512/file_type_css_icon_130661.png" id="lang"></div>
+                    <div>
+                        <div>CSS</div>
+                    </div>
+                </div>
+                <div class="jenis">
+                    <div><img src="https://images.icon-icons.com/2107/PNG/512/file_type_php_icon_130266.png" id="lang"></div>
+                    <div>
+                        <div>PHP</div>
+                    </div>
+                </div>
+                <div class="jenis">
+                    <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/306px-ISO_C%2B%2B_Logo.svg.png?20170928190710" id="lang"></div>
+                    <div>
+                        <div>C++</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="skill">
+            <div id="label"><div>Keahlian Lain</div></div>
+            <div id="content1">
+                <div class="jenis">
+                    <div><img src="https://images.icon-icons.com/2397/PNG/512/microsoft_office_word_logo_icon_145724.png" id="lang"></div>
+                    <div>
+                        <div>Microsoft Word</div>
+                    </div>
+                </div>
+                <div class="jenis">
+                    <div><img src="https://images.icon-icons.com/2397/PNG/512/microsoft_office_excel_logo_icon_145720.png" id="lang"></div>
+                    <div>
+                        <div>Microsoft Excel</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="study">
+            <div id="label"><div>Pendidikan </div></div>
+            <div id="content1">
+                <div class="jenis2">
+                    <div>SMA Perguruan Rakyat 1</div>
+                    <div class="grade">MIPA - 2024</div>
+                </div>
+                <div class="jenis2">
+                    <div>Institut Teknologi Sumatera</div>
+                    <div class="grade">S1 Matematika - Aktif</div>
+                </div>
+            </div>
+        </div>
+        <div id="pengalaman">
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
