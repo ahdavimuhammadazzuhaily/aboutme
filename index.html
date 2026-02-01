@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahdavi Muhammad Azzuhaily</title>
     <style>
+        html{
+            scroll-behavior: smooth;
+        }
         *{
             font-family: monospace;
         }
@@ -18,8 +21,9 @@
             row-gap: 2px;
         }
         #welcome{
+            padding: 35.5vh 0;
             display: flex;
-            padding: 35.5vh 0px;
+            flex-direction: column;
             text-align: center;
             justify-content: center;
             align-items: center;
@@ -44,7 +48,24 @@
                 width: 100%;
             }
         }
-
+        #hint1:hover{
+            cursor: pointer; 
+        }
+        #hint0{
+            opacity: 0; 
+        }
+        #hint1{
+            opacity: 1; 
+            animation: muncul 1s;
+        }
+        @keyframes muncul {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 100%;
+            }
+        }
         #foto{
             margin: 0;
             display: flex;
@@ -78,11 +99,15 @@
             color: #f0f0f0;
         }
 
-        #desc{
+        #covdesc{
+            justify-self: center;
             text-align: justify;
-            border: 1px solid #f0f0f0;
+            border: 2px solid #f0f0f0;
             border-radius: 20px;
             font-size: 2.5vh;
+            padding: 10px;
+        }
+        #desc{
             padding: 10px;
         }
 
@@ -114,7 +139,7 @@
             display: grid;
             column-gap: 20px;
             row-gap: 10px;
-            grid-template-columns: auto auto;
+            grid-template-columns: 50% 50%;
         }
         .jenis{
             display: flex;
@@ -128,6 +153,7 @@
         }
 
         #skill{
+            padding-right: 10px;
             display: grid;
             padding: 10px;
         }
@@ -136,13 +162,17 @@
             padding: 10px;
             display: grid;
         }
+
         .jenis2{
-            padding: 5px 5px 5px 10px;
+            display: grid;
+            grid-template-rows: 70% 30%;
+            row-gap: 1.5px;
+            padding: 5px 10px 5px 10px;
             border-bottom: 1px solid #f0f0f0;
         }
         .grade{
             color: #f0f0f08e;
-            font-size: 13px;
+            font-size: 2vh;
         }
 
         @media (max-width: 550px) {
@@ -159,8 +189,11 @@
 </head>
 <body>
     <div id="content">
-        <div id="welcome">
-            <div id="covtext"><p id="text">Hi!</p></div>
+        <div id="welcome" onpointerdown="document.getElementById('hint0').id = 'hint1';">
+            <div id="covtext" onclick="window.scrollTo(0,window.innerHeight*1); document.getElementById('hint1').id = 'hint0';">
+                <p id="text">Hi!</p>
+                <div id="hint0">Click here</div>
+            </div>
         </div>
         <div id="foto">
             <div id="covfoto">
@@ -172,7 +205,7 @@
         </div>
 
         <div id="desc">
-            <p>Mahasiswa aktif Institut Teknologi Sumatera program studi Matematika. Menguasai beberapa bahasa pemrograman dan software beberapa software microsoft serta dapat beradaptasi terhadap lingkungan, bekerja sama tim, dan bekerja keras.</p>
+            <div id="covdesc"><p>Mahasiswa aktif Institut Teknologi Sumatera program studi Matematika. Menguasai beberapa bahasa pemrograman dan software beberapa software microsoft serta dapat beradaptasi terhadap lingkungan, bekerja sama tim, dan bekerja keras.</p></div>
         </div>
         <div id="language">
             <div id="label"><div>Bahasa Pemrograman</div></div>
