@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Portofolio of Me</title>
+</head>
+
+<body>
+    <div class="cover-help-shortcut">
+        <div class="help-shortcut">
+            <div class="shc sgreeting">
+                <div class="label lgreeting">Salam</div>
+                <a href="#greeting"><img src="icon png porto.png"></a>
+            </div>
+            <div class="shc saboutme">
+                <div class="label laboutme">Tentang Saya</div>
+                <a href="#aboutme"><img src="icon png porto.png"></a>
+            </div>
+            <div class="shc sMyProject">
+                <div class="label lMyProject">Proyek Saya</div>
+                <a href="#MyProject"><img src="icon png porto.png"></a>
+            </div>
+            <div class="shc sContact">
+                <div class="label lContact">Kontak Saya</div>
+                <a href="#Contacts"><img src="icon png porto.png"></a>
+            </div>
+        </div>
+    </div>
+    <div id="containercontent">
+        <div id="greeting">
+            <div id="greeth1">
+                <h1 id="h1greating">Selamat Datang</h1>
+            </div>
+            <div id="lining">
+                <span class="justdot"></span>
+                <span id="linegreeting"></span>
+                <span class="justdot"></span>
+            </div>
+            <div id="greeth2">
+                <h3 id="h3greating">Salam Kenal dan Salam Sejahtera</h3>
+            </div>
+        </div>
+        <nav class="navbar" id="navbar">
+            <div class="logo-porto">AHDAVI</div>
+            <div class="menu">
+                <div class="coverbuttonlang">
+                    <button class="buttonlang" type="button" aria-label="Ganti bahasa" aria-pressed="false">
+                        <span id="IDorEN">ID</span>
+                    </button>
+                </div>
+                <ul>
+                    <li class="buttonmenu">About Me</li>
+                    <li class="buttonmenu">My Project</li>
+                    <li class="buttonmenu" id="Contact">Contact</li>
+                </ul>
+            </div>
+        </nav>
+        <section class="aboutme" id="aboutme">
+            <div class="detailme">
+                <div class="contentme">
+                    <p>Mahasiswa aktif Institut Teknologi Sumatera program studi Matematika. Menguasai beberapa bahasa
+                        pemrograman dan software beberapa software microsoft serta dapat beradaptasi terhadap
+                        lingkungan,
+                        bekerja sama tim, dan bekerja keras.</p>
+                </div>
+            </div>
+            <div id="myphotoandname">
+                <div id="photo">
+                    <img src="foto ahdavi.png" alt="Profil">
+                    <svg id="photo-decor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="white" />
+                    </svg>
+                </div>
+                <h3>Ahdavi Muhammad Azzuhaily</h3>
+            </div>
+            <div id="history">
+                <div id="inhistory">
+                    <div class="contentme" id="flexpendidikan">
+                        <div class="jenis jenisgrade">
+                            <div>SMA Perguruan Rakyat 1</div>
+                            <div class="grade">
+                                <span class="firstcol">MIPA</span>
+                                <span class="line"><span class="progress done"></span></span>
+                                <span class="lastcol">2024</span>
+                            </div>
+                        </div>
+                        <div class="jenis jenisgrade">
+                            <div>Institut Teknologi Sumatera</div>
+                            <div class="grade">S1 Matematika <span class="line"><span
+                                        class="progress done"></span></span>
+                                Aktif</div>
+                        </div>
+                    </div>
+                    <div class="contentme" id="pengalaman">
+                        <div class="jenis-jenispengalaman">
+                            <div>CROG International Lampung</div>
+                            <div class="grade">2025 <span class="line"><span class="progress undone"><span
+                                            class="isiprogress"></span><span class="dotend"></span></span></span>Now
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="MyProject" id="MyProject">
+            <div class="title">
+                <h3>My Project</h3>
+                <p>Berikut Project yang telah saya kerjakan</p>
+            </div>
+            <div id="menuproject">
+                <div id="resmi">
+                    <p onclick="bukalist()">Resmi</p>
+                </div>
+                <div id="nonresmi">
+                    <p onclick="tutuplist()">Non-resmi</p>
+                </div>
+            </div>
+            <div id="coverlist">
+                <div id="isianlist">
+                    <div class="listproject" id="listprojectresmi">
+                        <div class="jenisp">
+                            <h5 class="judul">Piter Parkir</h5>
+                            <div class="isilistproject">
+                                <div class="deskripsidanlink">
+                                    <p>Progam usulan sistem parkir itera berbasis python dengan memanfaatkan
+                                        ketidakberaturan
+                                        sehingga memudahkan mencari, merapikan dan mengamankan kendaraan di parkiran
+                                        gedung
+                                        ITERA.</p>
+                                    <div class="linklang">
+                                        <ul>
+                                            <li><a href="#">Python</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                            <li><a href="#">Python</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                            <li><a href="#">Python</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                        </ul>
+                                    </div>
+                                    <a href="#" class="linkproject">PITER PARKIR</a>
+                                </div>
+                                <img src="" alt="" id="photoproject">
+                            </div>
+                        </div>
+                        <div class="jenisp">
+                            <h5 class="judul">Piter Parkir</h5>
+                            <div class="isilistproject">
+                                <div class="deskripsidanlink">
+                                    <p>Progam usulan sistem parkir itera berbasis python dengan memanfaatkan
+                                        ketidakberaturan
+                                        sehingga memudahkan mencari, merapikan dan mengamankan kendaraan di parkiran
+                                        gedung
+                                        ITERA.</p>
+                                    <div class="linklang">
+                                        <ul>
+                                            <li><a href="#">Python</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                            <li><a href="#">Python</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                            <li><a href="#">Python</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                        </ul>
+                                    </div>
+                                    <a href="#">PITER PARKIR</a>
+                                </div>
+                                <img src="" alt="" id="photoproject">
+                            </div>
+                        </div>
+                        <div class="jenisp">
+                            <h5 class="judul">Piter Parkir</h5>
+                            <div class="isilistproject">
+                                <div class="deskripsidanlink">
+                                    <p>Progam usulan sistem parkir itera berbasis python dengan memanfaatkan
+                                        ketidakberaturan
+                                        sehingga memudahkan mencari, merapikan dan mengamankan kendaraan di parkiran
+                                        gedung
+                                        ITERA.</p>
+                                    <div class="linklang">
+                                        <ul>
+                                            <li><a href="#">Python</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                            <li><a href="#">Python</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                            <li><a href="#">Python</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                        </ul>
+                                    </div>
+                                    <a href="#">PITER PARKIR</a>
+                                </div>
+                                <img src="" alt="" id="photoproject">
+                            </div>
+                        </div>
+                        <div class="jenisp">
+                            <h5 class="judul">Piter Parkir</h5>
+                            <div class="isilistproject">
+                                <div class="deskripsidanlink">
+                                    <p>Progam usulan sistem parkir itera berbasis python dengan memanfaatkan
+                                        ketidakberaturan
+                                        sehingga memudahkan mencari, merapikan dan mengamankan kendaraan di parkiran
+                                        gedung
+                                        ITERA.</p>
+                                    <div class="linklang">
+                                        <ul>
+                                            <li><a href="#">Python</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                            <li><a href="#">Python</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                            <li><a href="#">Python</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                        </ul>
+                                    </div>
+                                    <a href="#">PITER PARKIR</a>
+                                </div>
+                                <img src="" alt="" id="photoproject">
+                            </div>
+                        </div>
+                    </div>
+                    <span id="horizontal-line"></span>
+                    <div class="listproject" id="listprojectnonresmi">
+                        <div class="jenisp">
+                            <h5 class="judul">Piter Parkir</h5>
+                            <div class="isilistproject">
+                                <div class="deskripsidanlink">
+                                    <p>Progam usulan sistem parkir itera berbasis python dengan memanfaatkan
+                                        ketidakberaturan
+                                        sehingga memudahkan mencari, merapikan dan mengamankan kendaraan di parkiran
+                                        gedung
+                                        ITERA.
+                                    </p>
+                                    <div class="linklang">
+                                        <ul>
+                                            <li><a href="#">Python</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                            <li><a href="#">Python</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                            <li><a href="#">Python</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                        </ul>
+                                    </div>
+                                    <a href="#">PITER PARKIR</a>
+                                </div>
+                                <img src="" alt="" id="photoproject">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="Contact" id="Contacts">
+            <div class="centercontact">
+                <h3 onclick="bukakontak()">Kontak Saya</h3>
+                <a href="#" class="ke ig"><span class="iconkontak" id="instagram-icon"></span><span class="text">Instagram</span></a>
+                <a href="mailto:ahdavimuhammadazzuhaily@gmail.com" class="ke gmail"><span class="iconkontak" id="gmail-icon"></span><span class="text">Email</span></a>
+                <a href="#" class="ke linked"><span class="iconkontak" id="linkedin-icon"></span><span class="text">LinkedIn</span></a>
+                <a href="#" class="ke wa"><span class="iconkontak" id="whatsapp-icon"></span><span class="text">Whatsapp</span></a>
+            </div>
+        </section>
+        <section class="Closing">
+            <div class="coverclosing">
+                <div class="covertext">
+                    <h2>Saya menunggu bekerja bersama anda</h2>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="logo-porto footerlogo">Ahdavi</div>
+        <p class="footerselamat"></p>
+        <div id="endfoooter">
+            <p id="creattedby">Dibuat oleh Ahdavi Muhammad Azzuhaily</p>
+            <p id="copyright">@2026</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
