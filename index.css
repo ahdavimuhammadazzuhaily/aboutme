@@ -166,6 +166,7 @@ nav {
     position: fixed;
     right: 0;
     height: 100vh;
+    width: fit-content;
     display: flex;
     color: white;
     align-items: center;
@@ -251,7 +252,7 @@ nav {
     opacity: 0;
     white-space: nowrap;
     transform: translateX(15px);
-    transition: max-width 300ms ease, opacity 300ms ease, transform 300ms ease,width 3s ease;
+    transition: max-width 300ms ease, opacity 300ms ease, transform 300ms ease, width 3s ease;
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -311,7 +312,7 @@ h3 {
 
 #linegreeting {
     display: block;
-    border: 1px solid white;
+    border: var(--width-border-linedot) solid white;
     border-radius: 999px;
     justify-self: center;
     height: 0;
@@ -328,13 +329,18 @@ h3 {
 }
 
 .justdot:first-child {
-    border: 1px solid red;
+    border: var(--width-border-linedot) solid red;
     animation: reddot 10s infinite;
 }
 
 .justdot:nth-child(3) {
-    border: 1px solid blue;
+    border: var(--width-border-linedot) solid blue;
     animation: bluedot 10s infinite;
+}
+
+:root {
+    --width-border-linedot: 1px;
+    --width-animation : 50%;
 }
 
 @keyframes reddot {
@@ -382,11 +388,11 @@ h3 {
     }
 
     10% {
-        width: 50%;
+        width: var(--width-animation);
     }
 
     70% {
-        width: 50%;
+        width: var(--width-animation);
     }
 
     75% {
@@ -512,11 +518,26 @@ h3 {
     }
 }
 
+@media (max-width: 620px) {
+    :root {
+        --width-border-linedot: 2px;
+        --width-animation : 80%;
+    }
+
+    #greeting h1 {
+        font-size: 1.6rem;
+    }
+
+    #greeting h3 {
+        font-size: 1.1rem;
+    }
+}
+
 section {
     margin: 20vh 10px;
     padding: 10px;
     height: calc(100vh - 80px);
-    
+
 }
 
 .aboutme {
@@ -715,9 +736,10 @@ section {
     grid-template-columns: 50% 50%;
 }
 
-.MyProject{
+.MyProject {
     gap: 10px;
 }
+
 .title h3 {
     width: 100%;
     font-size: 2.5rem;
@@ -725,28 +747,29 @@ section {
     color: white;
     margin-bottom: 10px;
 }
+
 .title p {
     font-size: 1rem;
-    margin : 5px  0 30px 0;
+    margin: 5px 0 30px 0;
     color: rgb(160, 160, 170);
 }
 
-#menuproject{
-    display : flex;
+#menuproject {
+    display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-#menuproject div{
+#menuproject div {
     display: block;
     border-bottom: 2px solid white;
     transition: border-bottom 0.1s linear;
 }
 
-#menuproject p{
+#menuproject p {
     display: block;
     padding: 12px 20px;
-    width : 100%;
+    width: 100%;
     color: white;
     background: none;
     cursor: pointer;
@@ -756,35 +779,36 @@ section {
     font-size: 1rem;
 }
 
-#menuproject p:hover{
+#menuproject p:hover {
     background: linear-gradient(135deg, rgba(255, 120, 0, 0.2), rgba(255, 80, 0, 0.1));
     color: rgb(255, 200, 100);
 }
-#menuproject div:has(p:hover){
+
+#menuproject div:has(p:hover) {
     border-bottom: 0px solid white;
 }
 
-#coverlist{
+#coverlist {
     box-sizing: content-box;
-    margin : 10px 0 0 0;
-    height : 100%;
-    overflow :hidden;
+    margin: 10px 0 0 0;
+    height: 100%;
+    overflow: hidden;
     display: flex;
     position: relative;
 }
 
-#isianlist{
+#isianlist {
     justify-content: center;
     width: 100%;
     display: grid;
-    height : 100%;
-    gap : 5px;
+    height: 100%;
+    gap: 5px;
     grid-template-columns: 80% 5px 80%;
     transform: translateX(calc(30% + 15px));
     transition: transform 0.7s ease-in-out;
 }
 
-.listproject{
+.listproject {
     gap: 10px;
     display: block;
     padding: 15px;
@@ -795,32 +819,32 @@ section {
     border: 1px solid rgba(255, 120, 0, 0.1);
 }
 
-.listproject::-webkit-scrollbar{
+.listproject::-webkit-scrollbar {
     width: 5px;
 }
 
-.listproject::-webkit-scrollbar-thumb{
+.listproject::-webkit-scrollbar-thumb {
     background-color: rgb(60, 60, 60);
     border-radius: 20px;
 }
 
-.listproject::-webkit-scrollbar-track{
+.listproject::-webkit-scrollbar-track {
     background: rgb(40, 40, 40);
     border-radius: 20px;
 }
 
-#listprojectresmi{
+#listprojectresmi {
     width: 100%;
     filter: blur(0);
 }
 
-#listprojectnonresmi{
+#listprojectnonresmi {
     width: 100%;
     filter: blur(2px);
 }
 
 
-#horizontal-line{
+#horizontal-line {
     display: block;
     width: 1px;
     height: 100%;
@@ -833,6 +857,7 @@ section {
     gap: 15px;
     height: 100%;
 }
+
 .linkproject {
     background: linear-gradient(135deg, rgb(30, 30, 40), rgb(20, 20, 30));
     width: fit-content;
@@ -868,13 +893,11 @@ section {
     background: rgb(255, 120, 0);
 
     /* ujung kanan berbentuk tombak */
-    clip-path: polygon(
-        0 0,
-        85% 0,
-        100% 50%,
-        85% 100%,
-        0 100%
-    );
+    clip-path: polygon(0 0,
+            85% 0,
+            100% 50%,
+            85% 100%,
+            0 100%);
 
     transition: left 500ms ease;
     z-index: -1;
@@ -967,13 +990,14 @@ section {
     transform: translateY(-3px);
 }
 
-.Contact{
+.Contact {
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.centercontact{
+
+.centercontact {
     position: relative;
     width: 150px;
     height: 150px;
@@ -987,11 +1011,13 @@ section {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
-.centercontact h3{
+
+.centercontact h3 {
     background: linear-gradient(135deg, rgb(30, 30, 40), rgb(20, 20, 30));
     border: 3px solid rgba(255, 120, 0, 0.3);
     position: relative;
@@ -999,11 +1025,11 @@ section {
     align-content: center;
     border-radius: 999px;
     height: 100%;
-    width: 100%;    
+    width: 100%;
     cursor: pointer;
     z-index: 999;
     transform: rotate(360deg);
-    animation : blink 2s infinite linear;
+    animation: blink 2s infinite linear;
     transition: box-shadow 1s linear, transform 1s linear, border-color 1s linear;
     font-size: 1.1rem;
     font-weight: 700;
@@ -1011,53 +1037,56 @@ section {
 
 
 @keyframes blink {
-    0%{
+    0% {
         box-shadow: 0 0 0px 0px rgb(255, 100, 0);
     }
-    50%{
+
+    50% {
         box-shadow: 0 0 6px 1px rgb(255, 100, 0);
     }
-    100%{
+
+    100% {
         box-shadow: 0 0 0px 0px rgb(255, 100, 0);
     }
 }
 
-.ke{
+.ke {
     color: white;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     width: 70px;
     height: 70px;
     text-align: center;
     border-radius: 999px;
-    transition: top 1s linear, left 1s linear;   
+    transition: top 1s linear, left 1s linear;
 }
 
-.text{
+.text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
 }
 
 @keyframes counterspin {
     0% {
-        transform: rotate(360deg)  ;
+        transform: rotate(360deg);
     }
+
     100% {
-        transform: rotate(0deg)  ;
+        transform: rotate(0deg);
     }
 }
 
-.ke:hover .text{
+.ke:hover .text {
     top: 110%;
     left: 50%;
     transition: top 1s ease-in-out;
 }
 
-#instagram-icon{
+#instagram-icon {
     display: block;
     position: relative;
     height: 100%;
@@ -1069,7 +1098,8 @@ section {
     z-index: 998;
     border-radius: 999px;
 }
-#linkedin-icon{
+
+#linkedin-icon {
     display: block;
     position: relative;
     height: 100%;
@@ -1081,7 +1111,8 @@ section {
     z-index: 998;
     border-radius: 999px;
 }
-#whatsapp-icon{
+
+#whatsapp-icon {
     display: block;
     position: relative;
     height: 100%;
@@ -1093,7 +1124,8 @@ section {
     z-index: 998;
     border-radius: 999px;
 }
-#gmail-icon{
+
+#gmail-icon {
     display: block;
     position: relative;
     height: 100%;
@@ -1106,17 +1138,17 @@ section {
     border-radius: 999px;
 }
 
-.iconkontak:hover{
+.iconkontak:hover {
     animation: blink 1s infinite ease-out;
-}       
-
-.closing{
-    margin: 20vh 10px ;
-    padding: 10px;
-    height: calc(80vh - 80px);   
 }
 
-.coverclosing{
+.closing {
+    margin: 20vh 10px;
+    padding: 10px;
+    height: calc(80vh - 80px);
+}
+
+.coverclosing {
     display: flex;
     height: 100%;
     width: 100%;
@@ -1124,10 +1156,11 @@ section {
     align-items: center;
 }
 
-.covertext{
+.covertext {
     display: inline-block;
 }
-.covertext h2{
+
+.covertext h2 {
     display: block;
     width: 100%;
     overflow: hidden;
@@ -1140,24 +1173,33 @@ section {
 }
 
 @keyframes typing {
-    0%{
+    0% {
         width: 0;
     }
-    70%{
+
+    70% {
         width: 100%;
     }
 }
 
-.footerlogo{
+@media (max-width: 620px) {
+    .covertext h2 {
+        font-size: 1.2rem;
+    }
+}
+
+.footerlogo {
     grid-area: foot1;
     align-self: center;
 }
-.footerselamat{
+
+.footerselamat {
     height: 100%;
     align-content: center;
     grid-area: foot2;
 }
-#endfoooter{
+
+#endfoooter {
     justify-content: space-between;
     grid-area: foot3;
     display: flex;
@@ -1165,7 +1207,8 @@ section {
     gap: 20px;
     align-items: center;
 }
-footer{
+
+footer {
     background: linear-gradient(180deg, rgba(15, 15, 25, 0.95) 0%, rgb(10, 10, 20) 100%);
     padding: 40px 20px 30px;
     width: 100%;
